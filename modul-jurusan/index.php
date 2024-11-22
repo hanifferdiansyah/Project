@@ -54,9 +54,9 @@
                                         <th scope="row"><?= $nomor++ ?></th>
                                         <td><?= $data['kode'] ?></td>
                                         <td><?= $data['jurusan'] ?></td>
-                                        <td>Otto</td>
                                         <td>
-                                            <a class="btn btn-success btn-sm" href=""><i class="fa-solid fa-pen-to-square"></i></a>
+                                            <a class="btn btn-success btn-sm" href="edit.php?id=<?= $data['id'] ?>"><i class="fa-solid fa-pen-to-square"></i></a>
+
                                             <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#hapus<?=$data['id']?>">
                                                 <i class="fa-solid fa-trash-can"></i>
                                             </button>
