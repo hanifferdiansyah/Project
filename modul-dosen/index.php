@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Jurusan</title>
+    <title>Data Dosen</title>
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/all.css">
 </head>
@@ -18,10 +18,10 @@
 
     <div class="container">
         <div class="row mt-5">
-            <div class="col-8 m-auto">
+            <div class="col-12 m-auto">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="float-start">Data Jurusan</h3>
+                        <h3 class="float-start">Data Dosen</h3>
                         <p class="float-end"><a class="btn btn-primary" href="form.php"><i class="fa-solid fa-square-plus"></i> Tambah Data</a></p>
                     </div>
                     <div class="card-body">
@@ -30,8 +30,11 @@
                             <thead>
                                 <tr>
                                     <th scope="col">No</th>
-                                    <th scope="col">Kode</th>
-                                    <th scope="col">Nama Jurusan</th>
+                                    <th scope="col">NIDN</th>
+                                    <th scope="col">Nama Dosen</th>
+                                    <th scope="col">Jabatan</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">No Handphone</th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
@@ -41,7 +44,7 @@
                                 include("../koneksi.php");
 
                                 #2. menulis query
-                                $tampil = "SELECT * FROM jurusans";
+                                $tampil = "SELECT * FROM dosens";
 
                                 #3. jalankan query
                                 $proses = mysqli_query($koneksi, $tampil);
@@ -52,8 +55,11 @@
                                 ?>
                                     <tr>
                                         <th scope="row"><?= $nomor++ ?></th>
-                                        <td><?= $data['kode'] ?></td>
-                                        <td><?= $data['jurusan'] ?></td>
+                                        <td><?= $data['nidn'] ?></td>
+                                        <td><?= $data['nama'] ?></td>
+                                        <td><?= $data['jabatan'] ?></td>
+                                        <td><?= $data['email'] ?></td>
+                                        <td><?= $data['no_hp'] ?></td>
                                         <td>
                                             <a class="btn btn-success btn-sm" href="edit.php?id=<?= $data['id'] ?>"><i class="fa-solid fa-pen-to-square"></i></a>
 
@@ -70,7 +76,7 @@
                                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                         </div>
                                                         <div class="modal-body">
-                                                            Yakin Data <b><?=$data['jurusan']?></b> ingin dihapus?
+                                                            Yakin Data <b><?=$data['nama']?></b> ingin dihapus?
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">BATAL</button>
