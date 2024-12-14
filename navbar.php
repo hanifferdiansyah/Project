@@ -10,13 +10,13 @@
           <a class="nav-link active" aria-current="page" href="/hanif62/Project/index.php">Beranda</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Data Mahasiswa</a>
+          <a class="nav-link active" aria-current="page" href="/hanif62/Project/modul-mahasiswa/index.php">Data Mahasiswa</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/hanif62/Project/modul-jurusan/index.php">Data Jurusan</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Data Dosen</a>
+          <a class="nav-link active" aria-current="page" href="/hanif62/Project/modul-dosen/index.php">Data Dosen</a>
         </li>
        
       </ul>
