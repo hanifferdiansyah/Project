@@ -57,7 +57,9 @@ if(isset($_POST['tombol'])){
 </head>
 <body>
 
-
+<?php
+    include("navbar.php")
+?>
 <div class="container">
     <div class="row mt-5">
         <div class="col-8 m-auto">
